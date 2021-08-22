@@ -7,7 +7,8 @@ export default function counterReducer(
 	switch (action.type) {
 		case 'INCREASE_COUNT':
 			return {
-				clicks: state.clicks + 1
+				clicks: state.clicks + 1, 
+				items: state.items.concat(state.items.length + 1)
 			}
 		default:
 			return state;
